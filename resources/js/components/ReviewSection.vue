@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white py-20 px-6 text-center overflow-hidden">
     <h2 class="text-4xl font-bold mb-6 text-gray-900">
-      What Our <span class="text-pink-600">Fans</span> Say 💬
+      What Our <span class="text-sky-600">Fans</span> Say 💬
     </h2>
     <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
       Real reviews from real K-Pop lovers around the world 🌍
@@ -16,19 +16,19 @@
         <div
           v-for="(review, index) in reviews"
           :key="index"
-          class="flex-shrink-0 w-80 bg-gradient-to-br from-pink-50 to-purple-50 p-6 rounded-2xl shadow-md"
+          class="flex-shrink-0 w-80 bg-gradient-to-br from-sky-50 to-indigo-50 p-6 rounded-2xl shadow-md"
         >
           <div class="flex justify-center mb-4">
             <img
               :src="review.avatar"
               alt="User avatar"
-              class="w-20 h-20 rounded-full border-2 border-pink-400 object-cover"
+              class="w-20 h-20 rounded-full border-2 border-sky-400 object-cover"
             />
           </div>
           <h3 class="font-semibold text-lg text-gray-800 mb-2">
             {{ review.name }}
           </h3>
-          <p class="text-pink-600 text-sm mb-2">⭐ {{ review.rating }}/5</p>
+          <p class="text-sky-600 text-sm mb-2">⭐ {{ review.rating }}/5</p>
           <p class="text-gray-700 text-sm italic">"{{ review.comment }}"</p>
         </div>
       </div>
@@ -36,13 +36,13 @@
       <!-- Navigation Buttons -->
       <button
         @click="scrollLeft"
-        class="absolute left-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full hover:bg-pink-600 transition"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-sky-500 text-white p-2 rounded-full hover:bg-sky-600 transition"
       >
         <i class="fas fa-chevron-left"></i>
       </button>
       <button
         @click="scrollRight"
-        class="absolute right-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full hover:bg-pink-600 transition"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-sky-500 text-white p-2 rounded-full hover:bg-sky-600 transition"
       >
         <i class="fas fa-chevron-right"></i>
       </button>

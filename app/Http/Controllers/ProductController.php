@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    public function index(Request $request)
+    {
+        $products = Product::query()
+            ->orderByDesc('created_at')
+            ->paginate($request->integer('per_page', 12));
+
+        return response()->json($products);
+    }
+
+    public function show(Product $product)
+    {
+        return response()->json($product);
+    }
+}
